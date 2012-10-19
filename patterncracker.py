@@ -71,9 +71,11 @@ def grab_gesture_from_phone():
     import os
     print "[0] Extracting secret from the device..."
     # os.system("adb pull /data/system/gesture.key >NUL")
-    os.system("""adb shell "su -c 'cp/data/system/gesture.key /sdcard/' " >NUL""")
+    if os.path.exists("gesture.key"):
+        os.remove("gesture.key")
+    os.system("""adb shell "su -c 'cp /data/system/gesture.key /sdcard/' " >NUL""")
     os.system("adb pull /sdcard/gesture.key >NUL")
-    os.system("""adb shell "rm /sdcard/gesture.key' " >NUL""")
+    os.system("""adb shell "rm /sdcard/gesture.key" >NUL""")
 
 def main(argv=None):
     if argv is None:
