@@ -1,19 +1,21 @@
 AndroidPatternCracker
 =====================
 
-## A script cracking the Android 3x3 pattern lock using rainbow tables.
+## Description
+A Python script that cracks the Android 3x3 pattern lock using rainbow tables. 
 
-### Requirements
+Tested on Galaxy Nexus (Android 4.1) and Motorola Droid (Android 2.3).
+
+## Requirements
 * Python 2.x
 * A rooted Android device
 * Android Debugging Bridge (standalone ADB avaiable at http://goo.gl/WXFFu)
 
-### Instructions
-
+## Instructions
 1. Make sure your device is connected via USB
 2. Run "python patterncracker.py"
 
-### Usage
+## Usage
 ```patterncracker [-i gesture_file [-r rainbow_table_file]]```
 
 ### Copyright and licence
